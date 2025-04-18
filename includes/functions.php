@@ -21,6 +21,23 @@ function getLastsJobs($pdo)
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-// la suite ....
+// la liste des entreprise
 
-// la liste des entreprise 
+// recupere toutes les 4 companies (entreprise) pour affficher dans la homepage
+function getHomeCompanies($pdo){
+    $sql = "SELECT * FROM companies LIMIT 4";
+
+    $stmt = $pdo->query($sql);
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+function getCompanies($pdo)
+{
+    $sql = "SELECT * FROM companies";
+
+    $stmt = $pdo->query($sql);
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+

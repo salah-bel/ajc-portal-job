@@ -5,5 +5,6 @@ require_once 'includes/functions.php'; // import de logic
 
 $pdo = getPDO();
 $offers = getLastsJobs($pdo);
+$companies = getHomeCompanies($pdo);
 
 require_once 'views/pages/homepage.html.php';
